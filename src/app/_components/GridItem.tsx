@@ -12,7 +12,7 @@ export default function GridItem({ title, src, className }: GridItemProps) {
       className={`flex items-center justify-center gap-2 rounded-lg bg-slate-900 p-2 shadow transition-all duration-300 ease-in-out hover:z-10 hover:scale-110 md:gap-4 ${className}`}
     >
       <div className="flex items-center justify-center">
-        <div className="relative h-7 w-7 md:h-10 md:w-10">
+        <div className="relative h-6 w-6 md:h-10 md:w-10">
           <Image
             src={src}
             alt="Logo"
