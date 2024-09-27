@@ -1,25 +1,50 @@
-import Links from "./_components/Links";
-import Grid from "./_components/Grid";
+"use client";
+
+import { useEffect, useState } from "react";
+
+import LandingPage from "./_components/LandingPage";
+import ProjectsPage from "./_components/ProjectsPage";
 
 export default function HomePage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollPosition > windowHeight / 2 && currentPage === 1) {
+        handleChange(2);
+      } else if (scrollPosition < windowHeight / 2 && currentPage === 2) {
+        handleChange(1);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentPage]);
+
+  function handleChange(page: number) {
+    setIsFading(true);
+    setTimeout(() => {
+      setCurrentPage(page);
+      setIsFading(false);
+    }, 500);
+  }
+
   return (
-    <main className="relative flex min-h-svh flex-col justify-center gap-12 bg-slate-950 px-4 py-8 text-white md:flex-row md:gap-16 md:px-16 md:py-0">
-      <div className="flex items-center justify-center md:grow">
-        <div className="flex flex-col justify-center gap-4 text-center md:justify-start md:text-start">
-          <div className="text-6xl font-semibold">
-            Zac <span className="text-indigo-500">Hamann</span>
-          </div>
-          <div className="text-sm font-light md:text-xl">
-            Self-taught Fullstack Developer with a passion for pushing the
-            boundaries of what&apos;s possible and a commitment to making a
-            tangible impact.
-          </div>
-          <Links />
+    <div className="relative h-[200svh]">
+      <div className="sticky top-0 h-svh">
+        <div
+          className={`transition-opacity duration-300 ${isFading ? "opacity-0" : "opacity-100"}`}
+        >
+          {currentPage === 1 ? <LandingPage /> : <ProjectsPage />}
         </div>
       </div>
-      <div className="flex items-center justify-center md:shrink-0">
-        <Grid />
-      </div>
-    </main>
+    </div>
   );
 }
