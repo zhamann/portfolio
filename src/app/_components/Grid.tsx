@@ -36,7 +36,7 @@ const technologies = [
   { title: "HTML", src: "/icons/html.svg" },
   { title: "CSS", src: "/icons/css.svg" },
   { title: "Javascript", src: "/icons/javascript.svg" },
-  { title: "Tailwind CSS", src: "/icons/tailwind.svg" },
+  { title: "Tailwind", src: "/icons/tailwind.svg" },
   { title: "Git", src: "/icons/git.svg" },
   { title: "SQL", src: "/icons/sql.svg" },
 ];
