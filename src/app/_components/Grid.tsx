@@ -31,11 +31,11 @@ export default function Grid() {
 const technologies = [
   { title: "Next.js", src: "/icons/nextjs.svg" },
   { title: "React.js", src: "/icons/reactjs.svg" },
+  { title: "Typescript", src: "/icons/typescript.svg" },
   { title: "Python", src: "/icons/python.svg" },
   { title: "Flask", src: "/icons/flask.svg" },
   { title: "HTML", src: "/icons/html.svg" },
   { title: "CSS", src: "/icons/css.svg" },
-  { title: "Javascript", src: "/icons/javascript.svg" },
   { title: "Tailwind", src: "/icons/tailwind.svg" },
   { title: "Git", src: "/icons/git.svg" },
   { title: "SQL", src: "/icons/sql.svg" },
