@@ -3,9 +3,9 @@
 import { FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
 
 export default function Links() {
-  function handleDownload(src: string) {
-    console.log(`Download functionality coming soon... (${src})`);
-  }
+  // function handleDownload(src: string) {
+  //   console.log(`Download functionality coming soon... (${src})`);
+  // }
 
   return (
     <div className="flex items-center justify-center gap-2 md:justify-start">
@@ -18,7 +18,7 @@ export default function Links() {
           {social.icon}
         </a>
       ))}
-      {downloads.map((download, index) => (
+      {/* {downloads.map((download, index) => (
         <button
           key={index}
           onClick={() => handleDownload(download.src)}
@@ -26,7 +26,7 @@ export default function Links() {
         >
           {download.icon}
         </button>
-      ))}
+      ))} */}
     </div>
   );
 }
