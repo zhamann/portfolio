@@ -97,10 +97,10 @@ const projects = [
     src: "/projects/tdee.png",
   },
   {
-    title: "Coming soon.",
-    desc: "This is the project description",
-    href: "https://github.com/zhamann",
-    src: "/icons/nextjs.svg",
+    title: "Productivity",
+    desc: "Concept: This app is designed to keep track of upcoming tasks in a way that is easy to use and highly customizable.",
+    href: "https://github.com/zhamann/productivity",
+    src: "/projects/productivity.png",
   },
   {
     title: "Coming soon.",
